@@ -1,0 +1,49 @@
+.cat{
+    padding-top: 4em;
+}
+.menuBar {
+    display: flex;
+    padding: 10px 16px 10px 16px;
+  }
+
+  .menuBar .categoryMenu{
+    cursor: pointer;
+  }
+
+  .menuBar .categoryMenu span {
+    margin-right: 16px;
+    font-weight: bolder;
+  }
+
+  .menuBar .otherQuickOptions span {
+    padding: 10px;
+  }
+
+  .cat-main{
+      z-index: 1;
+      position: absolute;
+      margin-left: 2em;
+      width: 91%;
+      background-color: #fff;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.06);
+      padding: 2em 2em 5em;
+      height: 400px;
+      column-count: 4;
+      box-sizing: content-box;
+      color: #002f34;
+  }
+
+  .cat-menu{
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  .cat-heading{
+    margin: 12px 0;
+    cursor: pointer;
+  }
+  .cat-content{
+    margin: 12px 0;
+    cursor: pointer;
+  }

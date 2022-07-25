@@ -1,0 +1,125 @@
+.product-parent{
+    padding: 3em 3em 6em;
+    width: 100%;
+    height: auto;
+    
+}
+
+.product{
+  display: flex;
+  flex-direction:row;
+}
+
+.left-category{
+    margin-top: 23px;
+    width: 25em;
+    height: 100vh;
+}
+
+.left-category .left-cat-head{
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.left-category .left-main-cat{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1em;
+}
+.left-category .left-main-cat .minus-icon{
+    display: flex;
+    align-items: center;
+    width: 2em;
+    margin-right: 10px;
+    padding: auto;
+}
+.left-category .left-main-cat .minus-icon .minus{
+    width: 16px;
+    box-sizing: content-box;
+    border: 1px solid black;
+}
+.left-category .sub-cat{
+    padding: 0 15px;
+}
+.left-category .sub-cat ul{
+    list-style: none;
+    margin-left: 2.1rem;
+    padding: 4px;
+}
+.left-category .sub-cat li{
+    color: rgba(0, 0, 0, 0.6);
+    padding: 4px;
+}
+
+.items .cards {
+    column-count: 1;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .card {
+    margin-right: 12px;
+    margin-left: 11px;
+    margin-bottom: 23px;
+    padding: 13px;
+    max-width: 220px;
+    width: 220px;
+    height: 270px;
+    box-sizing: content-box;
+    display:inline-block;
+    cursor: pointer;
+  }
+
+  .card .favorite {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .card .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card .image img {
+    height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    text-align: center;
+  }
+  .card .content .rate {
+    margin-top: 10px;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .card .content .categoryf {
+    font-size: medium;
+  }
+  .card .content .name {
+    font-size: small;
+  }
+  .card .date {
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+  }
+  
+  .items {
+    margin: 16px 16px 24px;
+    padding: auto;
+
+  }
+
+  .items .heading{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      margin-left: 20px;
+  }
+  
+  .items .heading h6 {
+    font-size: 18px;
+    color: #002f34;
+  }
