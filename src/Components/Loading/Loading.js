@@ -1,22 +1,15 @@
-import React from 'react'
-import {css} from '@emotion/react';
-import PulseLoader from 'react-spinners/PulseLoader';
-import './Loading.css'
-
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
+import React from "react";
+import "./loading.css";
 
 function Loading() {
-    let Load = true;
-    let color = "#A2A7A7";
-    return (
-        <div className="sweet-loading" >
-            <PulseLoader color={color} loading={Load} css={override} size={20} speedMultiplier={0.5} />            
-        </div>
-    )
+  return (
+    <div class="d-flex position-absolute align-items-center w-100 h-100 justify-content-center"
+  style={{backgroundColor:"rgba(255, 255, 255, 0.61)"}}>
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+  );
 }
 
-export default Loading
+export default Loading;

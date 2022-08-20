@@ -4,9 +4,13 @@ export const PostContext = createContext()
 
 function Post({children}){
     const [PostDetails, setPostDetails] = useState()
+    const [isLoading, setIsLoading] = useState(true)
 
     return(
-        <PostContext.Provider value={{PostDetails,setPostDetails}} >
+        <PostContext.Provider value={{PostDetails,
+        setPostDetails, 
+        isLoading, 
+        setIsLoading}} >
             {children}
         </PostContext.Provider>
     )

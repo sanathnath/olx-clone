@@ -1,6 +1,7 @@
 .profileMain{
     display: flex;
     flex-direction: row;
+    /* padding-top: 6rem; */
     padding-left: 20px;
     padding-right: 20px;
 }

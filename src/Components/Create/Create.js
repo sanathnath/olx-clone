@@ -19,9 +19,12 @@ function Create() {
   const  navigate = useNavigate('')
   const date = new Date()
   const {Catgry} = useContext(CategoryContext)
-  console.log(Catgry);
+  console.log(Image) ;
 
   const handleSubmit = ()=>{
+    if (Name === '' || Price === '' || Image === null) {
+      return;
+    }
     const storageRef = ref(storage, `image/${Image.name}`);
 
     navigate('/');
@@ -47,12 +50,12 @@ function Create() {
             <div className="centerDiv">
               <h4>{Catgry}</h4>
             <br />
-            <label htmlFor="fname">Name</label>
+            <label htmlFor="name">Name</label>
             <br />
             <input
               className="input"
               type="text"
-              id="fname"
+              id="name"
               name="Name"
               onChange={(e)=>{
                 setName(e.target.value)
@@ -61,12 +64,12 @@ function Create() {
             
             <br />
             <br />
-            <label htmlFor="fname">Price</label>
+            <label htmlFor="price">Price</label>
             <br />
             <input
              className="input"
              type="number"
-             id="fname"
+             id="price"
              name="Price"
              onChange={(e)=>{
                setPrice(e.target.value)
@@ -80,7 +83,7 @@ function Create() {
             <br />
             <input type="file"
              onChange={(e)=>{
-              setImage(e.target.files[0])
+              setImage(e.target.files[0]);
              }}
              />
             <br />

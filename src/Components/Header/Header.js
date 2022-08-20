@@ -15,11 +15,12 @@ import { SearchContext } from '../../store/SearchContext' //search
 function Header() {
 
     const [SearchTerm, setSearchTerm] = useState('');
+
+    const {setSearchInput} = useContext(SearchContext); //search
     const {User} = useContext(AuthContext)
     const auth = getAuth();
     const navigate = useNavigate()
-    const {setSearchInput} = useContext(SearchContext); //search
-
+    
     return (
         <div className="headerParentDiv">
             <div className="headerChildDiv">
@@ -58,7 +59,7 @@ function Header() {
                     <span>ENGLISH</span>
                     <Arrow/>
                 </div>
-                <Link to={User ? '/profile' : '/login'} >
+                <Link to={User ? `/profile/${User.uid}` : '/login'} >
                 <div className="loginPage">
                     <span style={{color:'black'}}>{User ? User.displayName : 'Login'}</span>
                     <hr />

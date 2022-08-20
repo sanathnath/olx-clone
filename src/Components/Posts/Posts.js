@@ -9,22 +9,9 @@ import Heart from '../../assets/Heart'
 
 
 
-function Posts() {
+function Posts({Products}) {
     const navigate = useNavigate('')
-    const [Products, setProducts] = useState([])
-    const { setPostDetails } = useContext(PostContext)
-    useEffect(() => {
-        getDocs(colref_prod).then((snapshot)=>{
-            const allPost = snapshot.docs.map((product)=>{
-                return{
-                    ...product.data(),
-                    id:product.id
-                }
-            })
-            console.log(allPost);
-            setProducts(allPost)
-        })
-    }, [])
+    
     return (
         <div className='postParentDiv'>
             <div className="moreView">
@@ -34,13 +21,11 @@ function Posts() {
                 </div>
                 <div className="cards">
                   { Products.map((product)=>{
-
                       return(
                       <div className="card"
+                      key={product.id}
                       onClick={()=>{
-                          setPostDetails(product)
-
-                          navigate('/view')
+                          navigate(`/view/${product.id}`)
                       }}
                       >
                           <div className="favorite">
@@ -70,9 +55,9 @@ function Posts() {
                     {Products.map((product)=>{
                         return(
                             <div className="card"
+                            key={product.id}
                     onClick={()=>{
-                        setPostDetails(product)
-                        navigate('/view')
+                        navigate(`/view/${product.id}`)
                     }}>
                         <div className="favorite">
                             <Heart />
