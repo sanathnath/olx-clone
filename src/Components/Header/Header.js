@@ -31,11 +31,11 @@ function Header() {
                 </div>
 
                
-                <div className="placeSearch">
+                {/* <div className="placeSearch">
                     <Search/>
                     <input type="text" placeholder='INDIA' />
                     <Arrow/>
-                </div>
+                </div> */}
                 <div className="productSearch">
                     <div className="input">
                     <input
@@ -55,10 +55,10 @@ function Header() {
                         <Search color="#ffffff"></Search>
                     </div>
                 </div>
-                <div className="laguage">
+                {/* <div className="laguage">
                     <span>ENGLISH</span>
                     <Arrow/>
-                </div>
+                </div> */}
                 <Link to={User ? `/profile/${User.uid}` : '/login'} >
                 <div className="loginPage">
                     <span style={{color:'black'}}>{User ? User.displayName : 'Login'}</span>
